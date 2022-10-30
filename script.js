@@ -10,9 +10,11 @@ function add(a) {
 }
 
 function calc() {
-    let regex = /\D$/
-    let result1 = regex.test(display)
-    if (result1) {
+    let regex1 = /\D$/
+    let result1 = regex1.test(display)
+    let regex2 = /^\W/
+    let result2 = regex2.test(display)
+    if (result1 || regex2) {
         document.getElementById('result').innerText = 'Math Error'
     } else {
         let splitValue = String(eval(display)).split('.')
