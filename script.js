@@ -14,7 +14,7 @@ function calc() {
     let result1 = regex1.test(display)
     let regex2 = /^\W/
     let result2 = regex2.test(display)
-    if (result1 || regex2) {
+    if (result1 || result2) {
         document.getElementById('result').innerText = 'Math Error'
     } else {
         let splitValue = String(eval(display)).split('.')
