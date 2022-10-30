@@ -6,32 +6,34 @@ function add(a) {
     display =display.split('')
     display.push(a);
     display = display.join('')
-    console.log(display)
-    document.getElementById('display').innerText = display;
+    document.getElementById('result').innerText = (display);
 }
 
 function calc() {
-    let splitValue = String(eval(display)).split('.')
-    display = Number(eval(display));
-    display = String(eval(display));
-    console.log(display);
-    document.getElementById('display').innerText =   display;
-    if (splitValue.length === 1) {
-        display = String(eval(display));
-        console.log(display);
-        document.getElementById('display').innerText =   display;
+    let regex = /\D$/
+    let result1 = regex.test(display)
+    if (result1) {
+        document.getElementById('result').innerText = 'Math Error'
     } else {
-        let onlyDecimalValue = String(display - Math.floor(display)).split('')
-        onlyDecimalValue.shift();
-        let onlyDecimalValueLen = onlyDecimalValue.length;
-        console.log(onlyDecimalValue)
-        console.log(onlyDecimalValueLen)
-        if (onlyDecimalValueLen >= 16) {
-            display = (Number(display)).toFixed(15)
-            console.log(display)
-            document.getElementById('display').innerHTML = display;
+        let splitValue = String(eval(display)).split('.')
+        display = Number(eval(display));
+        if (display === Infinity) {
+            document.getElementById('result').innerText = 'Math Error'
         } else {
-            document.getElementById('display').innerHTML = display;
+            if (splitValue.length === 1) {
+                display = String(eval(display));
+                document.getElementById('result').innerText =   Number(display);
+            } else {
+                let onlyDecimalValue = String(display - Math.floor(display)).split('')
+                onlyDecimalValue.shift();
+                let onlyDecimalValueLen = onlyDecimalValue.length;
+                if (onlyDecimalValueLen >= 16) {
+                    display = (Number(display)).toFixed(15)
+                    document.getElementById('result').innerHTML = Number(display);
+                } else {
+                    document.getElementById('result').innerHTML = Number(display);
+                }
+            }
         }
     }
 }
@@ -40,6 +42,5 @@ function remove() {
     display =display.split('')
     display.pop()
     display = display.join('')
-    console.log(display)
-    document.getElementById('display').innerText = display;
+    document.getElementById('result').innerText = (display);
 }
