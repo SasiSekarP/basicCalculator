@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styleSheet/style.css">
+</head>
+<body>
+    <div class="calcBody">
+        <div class="heading">Simple Calculator</div>
+        <div class="display" id="display">0</div>
+        <div class="btnContainer">
+            <div class="row1">
+                <button id="clear" onclick="location.reload()" class="btn col1">AC</button>
+                <button id="delete" onclick="remove()" class="btn col2">DELETE</button>
+                <button id="equal" onclick="calc()" class="btn col3 equal">=</button>
+                <button id="divide" onclick="add('/')" class="btn col4">/</button>
+            </div>
+            <div class="row2">
+                <button id="7" onclick="add('7')" class="btn col1">7</button>
+                <button id="8" onclick="add('8')" class="btn col2">8</button>
+                <button id="9" onclick="add('9')" class="btn col3">9</button>
+                <button id="multiply" onclick="add('*')" class="btn col4">*</button>
+            </div>
+            <div class="row3">
+                <button id="4" onclick="add('4')" class="btn col1">4</button>
+                <button id="5" onclick="add('5')" class="btn col2 orange">5</button>
+                <button id="6" onclick="add('6')" class="btn col3">6</button>
+                <button id="subtract" onclick="add('-')" class="btn col4">-</button>
+            </div>
+            <div class="row4">
+                <button id="1" onclick="add('1')" class="btn col1">1</button>
+                <button id="2" onclick="add('2')" class="btn col2">2</button>
+                <button id="3" onclick="add('3')" class="btn col3">3</button>
+                <button id="add" onclick="add('+')" class="btn col4">+</button>
+            </div>
+            <div class="row5">
+                <button id="0" onclick="add('0')" class="btn leftCol">0</button>
+                <button id="dot" onclick="add('.')" class="btn col3">.</button>
+                <button id="percentile" onclick="add('%')" class="btn col4">%</button>
+            </div>
+            <div class="row5"></div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

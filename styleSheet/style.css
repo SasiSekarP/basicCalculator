@@ -1,0 +1,86 @@
+body{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.calcBody{
+    background-color: rgb(167, 163, 164);
+    border-radius: 10px;
+    box-shadow: black 10px 10px 2rem;
+    border: solid white 1px;
+}
+
+.heading,.display{
+    text-align: center;
+    padding: 0.5rem 0px;
+    font-size: 1rem;
+    margin: 1rem;
+    color: white;
+    background-color: rgb(71, 64, 64);
+    font-weight: 900;
+    height: 1.5rem;
+}
+
+.display{
+    background-color: rgb(230, 234, 234);
+    color: black;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    font-weight: 600;
+}
+
+.row1,.row2,.row3,.row4,.row5{
+    display: flex;
+    width: 90%;
+}
+
+.col1,.col2,.col3,.col4{
+    height: 2rem;
+    width: 75px;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-weight: 600;
+}
+
+.btnContainer{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.leftCol{
+    width: 152px;
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-weight: 600;
+}
+
+.col4{
+    background-color: red;
+}
+
+.equal{
+    background-color: green;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(171, 171, 231);
+}
