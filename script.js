@@ -14,7 +14,7 @@ function calc() {
     let result1 = regex1.test(display)
     let regex2 = /^\W/
     let result2 = regex2.test(display)
-    let regex3 = /\W{2}/
+    let regex3 = /\W{2,}/
     let result3 = regex3.test(display)
     if (result1 || result2 || result3) {
         document.getElementById('result').innerText = 'Math Error'
